@@ -32,4 +32,13 @@ class PracticeAppTest {
 
 
     }
+
+    @Test
+    void doChatWithRag() {
+
+        String chatId = UUID.randomUUID().toString();
+        String message = "HTTP方法中的GET匹配的语意是什么";
+        String answer = practiceApp.doChatWithRag(message, chatId);
+        Assertions.assertNotNull(answer);
+    }
 }
